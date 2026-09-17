@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大叔云页 — 让每个人，都拥有一个属于自己的数字世界</title>
+<meta name="description" content="大叔云页 — 一个认真做网站的大叔。个人主页、作品集、个人品牌、小型业务官网定制，999 元起。">
+<link rel="icon" href="assets/images/ui/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home" class="is-booting">
+
+<!-- 启动加载 v5 · 世界构建 + 双门开合 -->
+<div class="boot" id="boot" aria-hidden="true">
+  <i class="boot-door bdt"></i>
+  <i class="boot-door bdb"></i>
+  <i class="boot-beam"></i>
+  <i class="boot-seam"></i>
+  <div class="boot-ui">
+    <div class="boot-word mono" id="bootWord"></div>
+    <p class="boot-sub mono">大叔云页 · DIGITAL WORLD LOADING SYSTEM</p>
+    <div class="boot-blocks" id="bootBlocks"></div>
+    <div class="boot-readout">
+      <span class="boot-pct mono" id="bootPct">0<i>%</i></span>
+      <span class="boot-stage mono" id="bootStage">BUILDING WORLD</span>
+    </div>
+  </div>
+  <div class="boot-meta mono"><span>DSY.SYS v5.0 // BOOT SEQUENCE</span><span id="bootNode">NODE — LINKED</span></div>
+</div>
+
+<canvas class="bg-particles" id="bgParticles" aria-hidden="true"></canvas>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<div class="hud" aria-hidden="true">
+  <span class="hud-corner hud-tl mono">大叔云页 · 数字创作工作室</span>
+  <span class="hud-corner hud-tr mono" id="hudClock">00:00:00</span>
+  <span class="hud-corner hud-br mono">首页 / HOME</span>
+  <i class="hud-line hud-vl"></i>
+  <i class="hud-line hud-vr"></i>
+</div>
+
+<nav class="topbar" aria-label="站内导航">
+  <a class="brand" href="index.html">
+    <img class="brand-logo" src="assets/images/ui/logo.svg" alt="大叔云页 logo" width="28" height="28">
+    <span>大叔云页</span><span class="cursor-mark">_</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="is-active">首页</a>
+    <a href="cases.html">精选作品</a>
+    <a href="pricing.html">产品报价</a>
+    <a href="about.html">大叔是谁</a>
+    <a href="contact.html">联系我们</a>
+  </div>
+  <div class="topbar-right">
+    <button class="nav-burger" id="navBurger" type="button" aria-label="打开菜单" aria-expanded="false"><i></i><i></i><i></i></button>
+    <a class="mono topbar-cta" href="contact.html">开始构建</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 01 / 首屏 -->
+  <section class="sec sec-enter" id="enter">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="enter-stage">
+      <div class="enter-meta-top mono" data-reveal>
+        <span>DSY.SYS // DIGITAL CREATION STUDIO</span>
+        <span class="emt-right">个人网站定制 · EST. 2026 / ONLINE</span>
+      </div>
+      <h1 class="enter-title mono" id="enterTitle" data-text="DASHUYUNYE" aria-label="大叔云页 DASHUYUNYE"><span id="enterTyped"></span><span class="enter-caret" aria-hidden="true"></span></h1>
+      <p class="enter-title-cn" aria-hidden="true">大叔云页</p>
+      <span class="enter-side mono" aria-hidden="true">BUILD YOUR DIGITAL WORLD — 让每个人拥有自己的数字世界</span>
+      <div class="enter-low" data-reveal>
+        <div class="enter-slogan-wrap">
+          <p class="enter-slogan">让每个人，都拥有一个<br>属于自己的数字世界。</p>
+          <p class="enter-slogan-en mono">BUILD YOUR DIGITAL WORLD.</p>
+        </div>
+        <div class="enter-actions">
+          <a class="btn-line" href="cases.html"><span>查看精选作品</span> <i>→</i></a>
+          <a class="btn-line" href="pricing.html"><span>查看产品报价</span> <i>→</i></a>
+        </div>
+      </div>
+      <div class="scroll-hint mono" data-reveal>
+        <span>向下滚动 · SCROLL TO EXPLORE</span>
+        <i></i>
+      </div>
+    
+    <div class="frag frag-1 mono" aria-hidden="true">X:1024 Y:0768</div>
+    <div class="frag frag-2 mono" aria-hidden="true">[01101000 01101001]</div>
+    <div class="frag frag-3" aria-hidden="true"><img src="assets/images/hero/hero-main.webp" alt="" width="520" height="317" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- 02 / 你是谁 -->
+  <section class="sec sec-identity" id="identity">
+    <header class="sec-head">
+      <span class="sec-index mono">02 / WHO ARE YOU</span>
+      <h2 class="sec-title">选择你的世界<span class="en-sub">SELECT YOUR WORLD</span></h2>
+    </header>
+    <p class="sec-sub" data-reveal>每一种身份，都对应一座专属世界——没找到你的？大叔现场为你构建。</p>
+    <div class="identity-grid">
+      <ul class="identity-list" id="identityList">
+        <li><button class="identity-btn is-active" data-id="designer" data-img="assets/images/projects/project-05-designer.webp"><span class="ib-no mono">01</span><span class="ib-zh">设计师</span><span class="ib-en mono">DESIGNER</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+        <li><button class="identity-btn" data-id="developer" data-img="assets/images/projects/project-04-developer.webp"><span class="ib-no mono">02</span><span class="ib-zh">开发者</span><span class="ib-en mono">DEVELOPER</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+        <li><button class="identity-btn" data-id="photographer" data-img="assets/images/projects/project-02-portfolio.webp"><span class="ib-no mono">03</span><span class="ib-zh">摄影师</span><span class="ib-en mono">PHOTOGRAPHER</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+        <li><button class="identity-btn" data-id="creator" data-img="assets/images/projects/project-03-creator.webp"><span class="ib-no mono">04</span><span class="ib-zh">创作者</span><span class="ib-en mono">CREATOR</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+        <li><button class="identity-btn" data-id="freelancer" data-img="assets/images/projects/project-01-personal.webp"><span class="ib-no mono">05</span><span class="ib-zh">自由职业</span><span class="ib-en mono">FREELANCER</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+        <li><button class="identity-btn" data-id="artist" data-img="assets/images/projects/project-06-studio.webp"><span class="ib-no mono">06</span><span class="ib-zh">艺术家</span><span class="ib-en mono">ARTIST</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+        <li><button class="identity-btn" data-id="entrepreneur" data-img="assets/images/hero/hero-main.webp"><span class="ib-no mono">07</span><span class="ib-zh">创业者</span><span class="ib-en mono">ENTREPRENEUR</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+        <li><button class="identity-btn" data-id="owner" data-img="assets/images/projects/project-07-owner.webp"><span class="ib-no mono">08</span><span class="ib-zh">企业家</span><span class="ib-en mono">BUSINESS OWNER</span><i class="ib-arr" aria-hidden="true">&rarr;</i></button></li>
+      </ul>
+      <div class="identity-preview" id="identityPreview">
+        <div class="browser-frame">
+          <div class="browser-bar mono"><i class="bdot"></i><i class="bdot"></i><i class="bdot"></i><span class="browser-url" id="idUrl">dashuyunye.com/designer</span></div>
+          <div class="browser-body">
+            <img id="idImg" src="assets/images/projects/project-05-designer.webp" alt="身份世界预览" width="700" height="427" loading="lazy">
+            <div class="id-copy">
+              <span class="mono id-tag" id="idTag">世界 // 设计师</span>
+              <p id="idText">你的作品值得一个展厅，而不是一个相册。</p>
+              <span class="mono id-stat" id="idStat">栅格：12 列 / 主题：暗夜</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 / 精选作品 -->
+  <section class="sec sec-cases-preview">
+    <header class="sec-head">
+      <span class="sec-index mono">03 / WORKS</span>
+      <h2 class="sec-title">精选作品<span class="en-sub">SELECTED WORKS</span></h2>
+    </header>
+    <p class="sec-sub" data-reveal>每一件作品，都是一个完整的世界。点击进入，逐页细看。</p>
+    <div class="case-grid">
+      <article class="case-card" data-reveal>
+        <div class="browser-frame"><img src="assets/images/projects/project-01-personal.webp" alt="作品：个人主页" width="700" height="427" loading="lazy"></div>
+        <div class="case-body">
+          <span class="case-no">CASE 01</span>
+          <h3 data-case-title="case-01">个人主页 · 全息档案</h3>
+          <span class="case-badge">大叔云页 · 示范作品</span>
+          <a class="btn-line" href="case-01.html"><span>查看详情</span> <i>→</i></a>
+        </div>
+      </article>
+      <article class="case-card" data-reveal>
+        <div class="browser-frame"><img src="assets/images/projects/project-02-portfolio.webp" alt="作品：摄影作品集" width="700" height="427" loading="lazy"></div>
+        <div class="case-body">
+          <span class="case-no">CASE 02</span>
+          <h3 data-case-title="case-02">摄影作品集 · 虚空画廊</h3>
+          <span class="case-badge">大叔云页 · 示范作品</span>
+          <a class="btn-line" href="case-02.html"><span>查看详情</span> <i>→</i></a>
+        </div>
+      </article>
+      <article class="case-card" data-reveal>
+        <div class="browser-frame"><img src="assets/images/projects/project-03-creator.webp" alt="作品：创作者主页" width="700" height="427" loading="lazy"></div>
+        <div class="case-body">
+          <span class="case-no">CASE 03</span>
+          <h3 data-case-title="case-03">创作者主页 · 舞台入口</h3>
+          <span class="case-badge">大叔云页 · 示范作品</span>
+          <a class="btn-line" href="case-03.html"><span>查看详情</span> <i>→</i></a>
+        </div>
+      </article>
+    </div>
+    <p class="sec-more" data-reveal><a class="btn-line" href="cases.html"><span>查看全部作品</span> <i>→</i></a></p>
+  </section>
+
+  <!-- 04 / 产品报价速览 -->
+  <section class="sec sec-price-preview">
+    <header class="sec-head">
+      <span class="sec-index mono">04 / PRICING</span>
+      <h2 class="sec-title">产品报价<span class="en-sub">PRICING PLANS</span></h2>
+    </header>
+    <p class="sec-sub" data-reveal>明码标价，按世界的规模选择。</p>
+    <div class="tier-grid">
+      <article class="tier" data-reveal>
+        <span class="tier-no mono">档位 01</span>
+        <h3 class="tier-name">一隅</h3>
+        <span class="tier-sub">个人主页</span>
+        <p class="tier-price mono">¥999</p>
+        <ul class="tier-list">
+          <li>单页定制设计 · One-page design</li>
+          <li>移动端自适应 · Mobile responsive</li>
+          <li>基础滚动动效 · Basic motion</li>
+          <li>上线部署 · Deployment</li>
+        </ul>
+        <a class="tier-btn mono" href="pricing.html">了解更多 <i>→</i></a>
+      </article>
+      <article class="tier tier-hot" data-reveal>
+        <span class="tier-no mono">档位 02</span>
+        <span class="tier-flag mono">最受欢迎</span>
+        <h3 class="tier-name">一境</h3>
+        <span class="tier-sub">作品集 / 个人品牌</span>
+        <p class="tier-price mono">¥1999</p>
+        <ul class="tier-list">
+          <li>多页面定制设计 · Multi-page design</li>
+          <li>专属动效交互 · Custom motion</li>
+          <li>全端响应式 · All-device</li>
+          <li>部署 + 一年维护 · 1-year support</li>
+        </ul>
+        <a class="tier-btn mono" href="pricing.html">了解更多 <i>→</i></a>
+      </article>
+      <article class="tier" data-reveal>
+        <span class="tier-no mono">档位 03</span>
+        <h3 class="tier-name">一城</h3>
+        <span class="tier-sub">小型业务官网</span>
+        <p class="tier-price mono">¥2999</p>
+        <ul class="tier-list">
+          <li>完整视觉系统 · Visual system</li>
+          <li>业务展示 + 表单 · Biz + forms</li>
+          <li>搜索优化 · SEO basics</li>
+          <li>部署 + 一年维护 · 1-year support</li>
+        </ul>
+        <a class="tier-btn mono" href="pricing.html">了解更多 <i>→</i></a>
+      </article>
+      <article class="tier tier-custom" data-reveal>
+        <span class="tier-no mono">超越档位</span>
+        <h3 class="tier-name">无界</h3>
+        <span class="tier-sub">私人定制</span>
+        <p class="tier-price mono">报价面谈</p>
+        <ul class="tier-list">
+          <li>功能与规模不限 · Unlimited scope</li>
+          <li>完整数字世界策划 · Full planning</li>
+          <li>长期陪跑迭代 · Long-term iteration</li>
+        </ul>
+        <a class="tier-btn mono" href="pricing.html">了解更多 <i>→</i></a>
+      </article>
+    </div>
+    <p class="sec-more" data-reveal><a class="btn-line" href="pricing.html"><span>查看完整报价</span> <i>→</i></a></p>
+  </section>
+
+  <!-- 05 / 大叔是谁 -->
+        <section class="sec sec-about-preview" id="about">
+      <div class="about3" data-reveal>
+        <span class="about3-bg mono" aria-hidden="true">UNCLE</span>
+        <div class="about3-head mono">
+          <span>05 / ABOUT THE UNCLE</span><i aria-hidden="true"></i><span>档案 UNCLE.SYS</span>
+        </div>
+        <div class="about3-grid">
+          <div class="about3-copy">
+            <h2 class="about3-title">一个认真<br>做<em>网站</em>的大叔。</h2>
+            <p class="about3-en mono">JUST AN UNCLE WHO TAKES WEBSITES SERIOUSLY.</p>
+            <p class="about3-desc">不谈概念，先谈作品。从第一行字到最后一束光，每个页面都由大叔亲手构建 —— 你看到的每一个细节，都是他自己敲出来的。</p>
+            <div class="about3-tags mono" aria-label="工作方式">
+              <span>不套模板</span><span>亲手构建</span><span>一对一沟通</span>
+            </div>
+            <p class="about3-quote">“你负责想清楚要什么，剩下的，交给大叔。”</p>
+            <p class="about3-more"><a class="btn-line" href="about.html"><span>认识这个大叔</span> <i aria-hidden="true">&rarr;</i></a></p>
+          </div>
+          <figure class="about3-figure">
+            <img src="assets/images/avatars/uncle-workspace.webp" alt="工作台前的大叔剪影" width="600" height="824" loading="lazy">
+            <figcaption class="mono">SIGNAL // 大叔在线 &middot; EST.2026</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  <!-- 06 / 启动项目 · 邮件表单（准备好了吗 · 左 | 表单 · 右） -->
+  <section class="sec sec-startform" id="start">
+    <div class="split-grid">
+      <div class="split-copy start-copy" data-reveal>
+        <span class="sec-index mono">06 / START YOUR PROJECT</span>
+        <h2 class="start-title">准备好了<em>吗？</em></h2>
+        <p class="start-ready mono" aria-hidden="true">READY?</p>
+        <p class="split-sub">填好这份「入场申请」，它会变成一封邮件直接送达大叔的邮箱，48 小时内亲自回复。</p>
+        <ul class="split-points mono">
+          <li>RESPONSE — 48 小时内亲自回复</li>
+          <li>QUOTE — 免费评估与报价，不套路</li>
+          <li>PRIVACY — 信息仅用于项目沟通</li>
+        </ul>
+      </div>
+      <form class="mail-form" id="mailForm" novalidate data-reveal>
+        <div class="mf-row">
+          <label class="mf-field"><span class="mf-label mono">你的称呼 / NAME</span><input name="name" type="text" required placeholder="怎么称呼你"></label>
+          <label class="mf-field"><span class="mf-label mono">联系方式 / CONTACT</span><input name="contact" type="text" required placeholder="邮箱或微信号"></label>
+        </div>
+        <label class="mf-field"><span class="mf-label mono">选择世界 / WORLD</span>
+          <select name="world">
+            <option>一隅 ¥999 · 个人主页</option>
+            <option>一境 ¥1999 · 作品集 / 个人品牌</option>
+            <option>一城 ¥2999 · 小型业务官网</option>
+            <option>无界 · 私人定制</option>
+            <option>还不确定，先聊聊</option>
+          </select>
+        </label>
+        <label class="mf-field"><span class="mf-label mono">想构建的世界 / MESSAGE</span><textarea name="msg" rows="5" required placeholder="说说你是谁、想做一个什么样的网站..."></textarea></label>
+        <div class="mf-actions">
+          <button class="btn-line" type="submit">发送需求邮件 SEND <i>↗</i></button>
+          <p class="mf-note mono">提交后将打开你的邮件客户端 · 收件人 admin@dsriji.com</p>
+        </div>
+        <div class="terminal-out mono" id="formOut">&gt; _</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 07 / 联系我们 -->
+  <section class="sec sec-connect" id="connect">
+    <header class="connect-head" data-reveal>
+      <div>
+        <span class="sec-index mono">07 / CONNECT</span>
+        <h2 class="sec-title">随时联系<span class="en-sub">GET IN TOUCH</span></h2>
+      </div>
+      <p class="connect-sub">三种方式直达大叔：电话、邮件、微信。<br>或去上方表单，把你的世界讲给他听。</p>
+    </header>
+    <div class="connect-row">
+      <a class="connect-card" href="tel:15545461200" data-reveal>
+        <span class="cc-ico mono">TEL</span>
+        <b class="cc-name">呼叫大叔</b>
+        <span class="cc-val mono">15545461200</span>
+        <i class="cc-arrow" aria-hidden="true">↗</i>
+      </a>
+      <a class="connect-card" href="mailto:admin@dsriji.com" data-reveal>
+        <span class="cc-ico mono">MAIL</span>
+        <b class="cc-name">发送邮件</b>
+        <span class="cc-val mono">admin@dsriji.com</span>
+        <i class="cc-arrow" aria-hidden="true">↗</i>
+      </a>
+      <button class="connect-card" id="wechatBtn" type="button" data-wechat data-reveal>
+        <span class="cc-ico mono">WECHAT</span>
+        <b class="cc-name">添加微信</b>
+        <span class="cc-val mono">CorinLin</span>
+        <i class="cc-arrow" aria-hidden="true">↗</i>
+      </button>
+    </div>
+    <p class="connect-more" data-reveal><a class="btn-line" href="contact.html"><span>进入联系我们页面</span> <i>→</i></a></p>
+  </section>
+        <footer class="footer">
+      <div class="footer-cta">
+        <div class="fc-copy">
+          <p class="fc-title">把你的世界，<em>建到线上</em>。</p>
+          <p class="fc-en mono">READY TO BUILD YOUR WORLD ONLINE?</p>
+        </div>
+        <a class="btn-line" href="contact.html"><span>开始构建 START</span> <i aria-hidden="true">&#8599;</i></a>
+      </div>
+      <div class="footer-main">
+        <div class="fcol fcol-brand">
+          <p class="fcol-tit mono">01 / 品牌 BRAND</p>
+          <p class="footer-name">大叔云页<span class="footer-name-en mono">DASHUYUNYE</span></p>
+          <p class="footer-slogan">让每个人，都拥有一个属于自己的数字世界。</p>
+          <p class="footer-intro">一间一人数字创作工作室。不做模板、不套后台，每个页面都由大叔亲手设计、亲手构建。</p>
+          <p class="footer-status mono"><i aria-hidden="true"></i>SYSTEM ONLINE — 48H 内回复</p>
+        </div>
+        <nav class="fcol footer-nav" aria-label="页脚快速导航">
+          <p class="fcol-tit mono">02 / 导航 NAV</p>
+          <div class="fn-links">
+            <a href="index.html">首页</a>
+            <a href="cases.html">精选作品</a>
+            <a href="pricing.html">产品报价</a>
+            <a href="about.html">大叔是谁</a>
+            <a href="contact.html">联系我们</a>
+          </div>
+        </nav>
+        <div class="fcol footer-contact">
+          <p class="fcol-tit mono">03 / 联系 CONTACT</p>
+          <div class="fc-links">
+            <a href="tel:15545461200">电话 TEL — 15545461200</a>
+            <a href="mailto:admin@dsriji.com">邮箱 MAIL — admin@dsriji.com</a>
+            <button type="button" class="footer-wx" data-wechat>微信号 WECHAT — CorinLin</button>
+          </div>
+            <div class="fc-social" data-reveal>
+              <a class="soc" href="https://www.youtube.com/@dashuriji" target="_blank" rel="noopener" aria-label="YouTube：@dashuriji" title="YouTube：@dashuriji" data-name="YOUTUBE"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="5.6" width="18.4" height="12.8" rx="3.4"/><path class="fl" d="M10.2 9.2l5.2 2.8-5.2 2.8z"/></svg></a>
+              <a class="soc" href="https://space.bilibili.com/504800608" target="_blank" rel="noopener" aria-label="哔哩哔哩：504800608" title="哔哩哔哩 BILIBILI" data-name="BILIBILI"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7.2" width="18" height="12.3" rx="3"/><path d="M7.6 3.4L10 7.2M16.4 3.4L14 7.2"/><circle class="fl" cx="9" cy="13.4" r="1.15"/><circle class="fl" cx="15" cy="13.4" r="1.15"/></svg></a>
+              <a class="soc" href="https://wpa.qq.com/msgrd?v=3&amp;uin=79406222&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" aria-label="QQ：79406222" title="QQ：79406222" data-name="QQ"><svg viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(2.64 2.64) scale(0.78)"><path d="M12 3c-3.4 0-5.6 2.4-5.6 5.8 0 .9-.2 1.6-.7 2.4-.6 1-1.4 2.2-1.7 3.3-.2.7.2 1.1.8.8.4-.2.9-.8 1.2-1.3.3.7.7 1.4 1.2 2-.8.3-1.6.8-1.6 1.5 0 1 1.8 1.5 3.1 1.5.9 0 1.4-.3 1.6-.7h1.4c.2.4.7.7 1.6.7 1.3 0 3.1-.5 3.1-1.5 0-.7-.8-1.2-1.6-1.5.5-.6.9-1.3 1.2-2 .3.5.8 1.1 1.2 1.3.6.3 1-.1.8-.8-.3-1.1-1.1-2.3-1.7-3.3-.5-.8-.7-1.5-.7-2.4C17.6 5.4 15.4 3 12 3z"/><circle class="eye" cx="9.9" cy="8.7" r=".9"/><circle class="eye" cx="14.1" cy="8.7" r=".9"/></g></svg></a>
+              <button class="soc" type="button" data-copy-id="80397218164" data-copy-label="抖音号" aria-label="抖音号：80397218164，点击复制并前往抖音" title="抖音号：80397218164（点击复制并前往）" data-open="https://www.douyin.com/search/80397218164" data-app="snssdk1128://search?keyword=80397218164" data-name="DOUYIN"><svg viewBox="0 0 24 24" aria-hidden="true"><g transform="translate(1.8 1.8) scale(0.88)"><path d="M9.2 17.2V6.1l9.6-2.4v10.9"/><circle class="fl" cx="6.7" cy="17.6" r="2.5"/><circle class="fl" cx="16.3" cy="14.9" r="2.5"/></g></svg></button>
+            </div>
+        </div>
+        <div class="fcol footer-qr">
+          <p class="fcol-tit mono">04 / 微信 WECHAT</p>
+          <img src="assets/images/ui/wechat-qr.webp" alt="大叔云页微信二维码" width="120" height="120" loading="lazy">
+          <p class="fq-id mono">扫一扫，添加大叔为好友</p>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p class="footer-copy mono">&copy; 2026 大叔云页 DASHUYUNYE · 数字创作工作室 DIGITAL STUDIO · 保留所有权利</p>
+        <button class="to-top mono" id="toTop" type="button">回到顶部 TOP &#8593;</button>
+      </div>
+    </footer>
+
+</main>
+<div class="m-menu" id="mMenu" aria-hidden="true">
+  <div class="m-menu-head mono"><span>DASHUYUNYE · 大叔云页</span><button class="m-close" id="mClose" type="button" aria-label="关闭菜单">&times;</button></div>
+  <nav class="m-menu-links" aria-label="移动端导航">
+    <a href="index.html" class="is-active"><span class="mm-no mono">01</span>首页<span class="mm-en mono">HOME</span></a>
+    <a href="cases.html"><span class="mm-no mono">02</span>精选作品<span class="mm-en mono">WORKS</span></a>
+    <a href="pricing.html"><span class="mm-no mono">03</span>产品报价<span class="mm-en mono">PRICING</span></a>
+    <a href="about.html"><span class="mm-no mono">04</span>大叔是谁<span class="mm-en mono">ABOUT</span></a>
+    <a href="contact.html"><span class="mm-no mono">05</span>联系我们<span class="mm-en mono">CONTACT</span></a>
+  </nav>
+  <div class="m-menu-foot mono">
+    <a href="tel:15545461200">CALL — 15545461200</a>
+    <a href="mailto:admin@dsriji.com">MAIL — admin@dsriji.com</a>
+    <button type="button" data-wechat>WECHAT — CorinLin</button>
+  </div>
+</div>
+
+<div class="page-wipe" id="pageWipe" aria-hidden="true"></div>
+
+<div class="qr-modal" id="qrModal" aria-hidden="true">
+  <div class="qr-modal-mask" id="qrMask"></div>
+  <figure class="qr-modal-card">
+    <button class="qr-close mono" id="qrClose" type="button" aria-label="关闭">&times;</button>
+    <p class="qr-modal-tit mono">SCAN ME — 扫码加微信</p>
+    <img src="assets/images/ui/wechat-qr.webp" alt="大叔云页微信二维码" width="300" height="300">
+    <p class="qr-modal-id mono">微信号 WECHAT — <b>CorinLin</b>（已自动复制）</p>
+  </figure>
+</div>
+<script src="js/language.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/sound.js"></script>
+</body>
+</html>

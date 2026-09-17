@@ -1,0 +1,123 @@
+/* ============================================================
+   DSRIJI — responsive.css
+   mobile / tablet adaptation — still designed, never shrink-only
+   ============================================================ */
+
+/* ---------- ≤ 1080px ---------- */
+@media (max-width: 1080px) {
+  .split-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .identity-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .identity-preview { max-width: 640px; }
+  .tier-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .about2-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+  .about2-visual { max-width: 380px; justify-self: start; }
+  .about3-grid { grid-template-columns: 1fr; gap: 2.8rem; }
+  .about3-title { margin-right: 0; font-size: clamp(2.2rem, 7vw, 3.6rem); }
+  .about3-copy { padding-right: 0; }
+  .about3-bg { font-size: clamp(4rem, 20vw, 8rem); top: -1.6rem; }
+  .about3-figure { max-width: 380px; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 2.4rem 3vw; padding: 2.4rem 0 2rem; }
+}
+
+/* ---------- ≤ 768px : mobile ---------- */
+@media (max-width: 768px) {
+  /* 板块间距收紧：去掉强制满屏高度，上下留白缩小 */
+  .sec { padding: 9vh 6vw; min-height: 0; }
+  .sec-enter { min-height: 100vh; } /* 首屏横幅保持满屏 */
+  .page-body .sec { padding: 10vh 6vw 7vh; }
+  .sec-sub { margin-bottom: 2rem; }
+  .sec-more { margin-top: 1.8rem; }
+  .identity-grid { gap: 2rem; }
+  .about3-grid { gap: 2rem; margin-top: 2.2rem; }
+  .split-grid { gap: 2.2rem; }
+  .tier-grid { gap: 1.2rem; }
+  .connect-row { margin-top: 2rem; gap: 0.9rem; }
+  .connect-more { margin-top: 1.8rem; }
+  .case-grid { gap: 1.4rem; }
+
+  .topbar { padding: 12px 20px; }
+  .nav-links { display: none; }
+  .topbar-cta { display: none; }
+  .page-hero { padding-top: 18vh; }
+
+  /* 汉堡导航 + 全屏菜单 */
+  .nav-burger { display: inline-flex; }
+
+  /* footer：四栏纵向堆叠，全部居中 */
+  .footer-main { grid-template-columns: 1fr; gap: 2.4rem; padding: 2.2rem 0 1.8rem; }
+  .footer-intro { max-width: 30em; }
+  .footer-nav .fn-links { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.2rem; }
+  .footer-bar { flex-direction: column; align-items: center; gap: 1rem; }
+  /* 社交图标：手机端强制横向一排、显示为白色 */
+  .fc-social { flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 0.55rem; }
+  .fc-social a.soc, .fc-social button.soc { color: #fff; border-color: rgba(245, 247, 250, 0.4); }
+  .fc-social .soc:hover, .fc-social .soc:focus-visible { color: var(--accent); border-color: var(--accent); }
+  /* 声音开关：手机端只留音符图标 */
+  #soundToggle { right: 4vw; bottom: 1.6vh; padding: 0.5rem 0.62rem; }
+  #soundToggle .st-txt { display: none; }
+  .case-layout { grid-template-columns: 1fr; gap: 2.6rem; }
+  .case-aside { position: static; }
+  .case-nav { margin-top: 3rem; }
+  .case-nav .btn-line { flex: 1 1 auto; justify-content: center; }
+
+
+  .case-grid { grid-template-columns: 1fr; }
+
+  .hud-tl { display: none; }
+  .hud-vl { left: 12px; }
+  .hud-vr { right: 12px; }
+
+  /* ENTER */
+    .enter-title-cn { letter-spacing: 0.4em; text-indent: 0.4em; }
+  .frag-3 { display: none; }
+  .frag-1 { top: 16%; left: 6%; }
+  .frag-2 { bottom: 20%; right: 6%; }
+
+  /* 身份列表：移动端收紧 */
+  .identity-btn { gap: 0.7rem; padding: 0.85rem 0.7rem 0.85rem 1rem; }
+  .identity-btn .ib-en { letter-spacing: 0.16em; font-size: 0.56rem; }
+  /* price */
+  .tier-grid { grid-template-columns: 1fr; }
+  .tier { padding: 1.6rem 1.2rem; }
+
+  /* connect */
+  .term-btn { padding: 0.9rem 1rem; }
+  .term-btn:hover { padding-left: 1rem; }
+  .term-val { font-size: 0.6rem; }
+
+  /* 启动表单 */
+  .mf-row { grid-template-columns: 1fr; gap: 0; }
+  .mail-form { padding: 1.4rem; }
+
+  /* ENTER 移动端 */
+  .enter-meta-top { margin-bottom: 2.2rem; font-size: 0.58rem; }
+  .enter-title { letter-spacing: 0.06em; }
+  .enter-title-cn { margin-top: -0.18em; }
+  .enter-side { display: none; }
+  .enter-low { margin-top: 2rem; padding-top: 1.6rem; }
+  .frag-3 { opacity: 0.35; }
+}
+
+/* ---------- ≤ 420px ---------- */
+@media (max-width: 420px) {
+  .enter-title { letter-spacing: 0.06em; }
+  .sec-title { font-size: 1.5rem; }
+  .about2-big { font-size: 2.1rem; }
+  .about3-head { flex-wrap: wrap; gap: 0.6rem; font-size: 0.58rem; }
+  .about3-title { font-size: 2.2rem; }
+  .about3-tags span { padding: 0.45rem 0.7rem; font-size: 0.62rem; }
+  .start-title { font-size: 2.2rem; }
+  .start-ready { font-size: 1.5rem; letter-spacing: 0.12em; }
+  .footer-cta { flex-direction: column; align-items: flex-start; padding: 1.7rem 1.4rem; }
+  .qr-modal-card { padding: 1.8rem 1.4rem 1.4rem; }
+
+  /* connect：三卡竖排 */
+  .connect-head { flex-direction: column; align-items: flex-start; }
+  .connect-row { grid-template-columns: 1fr; gap: 1rem; margin-top: 2.4rem; }
+}
+
+/* ---------- touch devices: kill hover-only visuals ---------- */
+@media (hover: none) {
+  .cursor-dot, .cursor-ring { display: none; }
+}

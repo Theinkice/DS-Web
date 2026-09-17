@@ -1,0 +1,104 @@
+/* ============================================================
+   大叔云页 — animations.css
+   舒缓动效版：无频繁闪烁，一切动效缓慢、稳定、有目的
+   ============================================================ */
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+
+
+@keyframes pulseLine {
+  0%, 100% { transform: scaleY(0.35); transform-origin: top; opacity: 0.5; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+/* 缓慢的强调色呼吸（8 秒周期，亮度变化仅 ±5%，无闪烁感） */
+@keyframes calmGlow {
+  0%, 100% { text-shadow: 0 0 44px rgba(0, 229, 255, 0.22); }
+  50% { text-shadow: 0 0 60px rgba(0, 229, 255, 0.30); }
+}
+
+/* 首屏大标题：恒定柔光，不抖不闪 */
+.enter-title {
+  animation: calmGlow 8s ease-in-out infinite;
+}
+
+/* 身份切换：轻微浮现，不旋转不闪烁 */
+.identity-preview.is-switching .browser-frame { animation: switchFade 0.45s var(--ease); }
+@keyframes switchFade {
+  0% { opacity: 0.35; transform: translateY(6px); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* 案例卡片悬停：稳态过渡 */
+.case-card { transition: transform 0.4s var(--ease), border-color 0.3s; }
+.case-card:hover { transform: translateY(-6px); }
+
+/* ============================================================
+   启动序列动画
+   ============================================================ */
+
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(42px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes glowDrift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-16vw, 20vh); }
+}
+
+/* 首屏打字光标：稳态闪烁（输入符惯例节奏） */
+@keyframes caretBlink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0.15; }
+}
+
+/* 光标拖尾光尘：出现即缓慢消散 */
+  to { opacity: 0; transform: scale(0.2) translateY(8px); }
+}
+
+/* 启动屏缓慢扫描带 */
+
+/* 页脚在线状态点：缓慢呼吸 */
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+/* 数字百分比每跨 10% 的脉冲 */
+@keyframes pctTick {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.06); text-shadow: 0 0 80px rgba(0, 229, 255, 0.55); }
+  100% { transform: scale(1); }
+}
+
+/* 点击冲击环 + 火花 */
+@keyframes clickRing {
+  from { opacity: 0.9; transform: scale(1); }
+  to { opacity: 0; transform: scale(6); }
+}
+@keyframes sparkFly {
+  from { opacity: 1; transform: translate(0, 0) scale(1); }
+  to { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0.3); }
+}
+
+/* 按钮涟漪 */
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* 紫色光晕漂移 */
+@keyframes glowDrift2 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(14vw, -18vh); }
+}
+
+/* boot 扫描光束 */
+@keyframes beamSweep {
+  from { top: -90px; }
+  to { top: 100%; }
+}
